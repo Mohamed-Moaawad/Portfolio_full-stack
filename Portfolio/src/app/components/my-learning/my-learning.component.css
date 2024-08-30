@@ -1,0 +1,34 @@
+.my-learning{
+    width: 100%;
+    padding: var(--padding-sections);
+}
+
+.my-learning swiper-container{
+    width: 100%;
+    height: 650px;
+    cursor: grab;
+}
+
+
+.my-learning swiper-container swiper-slide img{
+    width: 100%;
+}
+
+:host ::ng-deep .swiper-pagination-bullet-active{
+    background-color: var(--second-color);
+}
+
+
+@media only screen and (max-width:991px){
+    .my-learning swiper-container{
+        height: 400px;
+    }
+}
+@media only screen and (max-width:768px){
+    .my-learning swiper-container{
+        height: 250px;
+    }
+    .my-learning swiper-container swiper-slide{
+        margin: 0;
+    }
+}

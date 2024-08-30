@@ -1,0 +1,125 @@
+.skills{
+    padding: var(--padding-sections);
+}
+
+.skills .row .imgs{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 25px;
+    row-gap: 30px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 15px;
+}
+
+.skills .row h6.head-title{
+    text-transform: capitalize;
+    color: var(--main-color);
+}
+
+.skills .row .imgs .img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.skills .row .imgs .img .box{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: rgba(165, 176, 176, 0.303);
+}
+
+.skills .row .imgs .img .box img{
+    width: 40px;
+}
+.skills .row .imgs .img span{
+    font-size: 11px;
+    text-transform: capitalize;
+}
+
+@media only screen and (max-width:768px){
+    .skills .row .imgs{
+        gap: 20px;
+    }
+    .skills .row .imgs .img .box{
+        width: 50px;
+        height: 50px;
+    }
+    .skills .row .imgs .img .box img{
+        width: 27px;
+    }
+    .skills .row .imgs .img span{
+        font-size: 9px;
+    }
+}
+
+
+
+.skills .row ul{
+    padding: 0;
+    list-style: none;
+}
+
+.skills .row ul li{
+    display: flex;
+    margin-bottom: 20px;
+    position: relative;
+    cursor: pointer;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 15px;
+}
+
+.skills .row ul li::after{
+    content: attr(data-title);
+    position: absolute;
+    bottom: 120%;
+    left: 0;
+    padding: 19px 12px;
+    background-color: var(--white-color);
+    box-shadow: 0 0 5px #9999999b;
+    border-radius: 3px;
+    font-size: 12px;
+    text-align: center;
+    text-transform: lowercase;
+    transition: all .2s;
+    opacity: 0;
+    pointer-events: none;
+    color: var(--gray-color);
+    line-height: 1.7;
+}
+
+.skills .row ul li:hover::after{
+    opacity: 1;
+}
+
+.skills .row ul li h5{
+    color: var(--second-color);
+    font-size: 16px;
+    font-weight: 700;
+    margin-right: 18px;
+}
+
+.skills .row ul li h6{
+    font-size: ;
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    text-transform: capitalize;
+    letter-spacing: 0.5px;
+}
+
+.skills .row ul li h6 span{
+    font-size: 12px;
+    font-weight: 400;
+    margin-top: 5px;
+    letter-spacing: 1px;
+
+}

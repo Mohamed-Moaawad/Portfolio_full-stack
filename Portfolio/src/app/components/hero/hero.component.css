@@ -1,0 +1,266 @@
+.hero-section{
+    width: 100%;
+    min-height: 100vh;
+    padding: var(--padding-sections) 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.hero-section::before{
+    content: '';
+    position: absolute;
+    background-color: #2a1454;
+    top: 90px;
+    right: 0;
+    box-shadow: 0 0 250px 120px var(--second-color);
+    opacity: 0.8;
+}
+.hero-section::after{
+    content: '';
+    position: fixed;
+    background-color: #2a1454;
+    bottom: 90px;
+    left: 0;
+    box-shadow: 0 0 250px 120px var(--second-color);
+    opacity: 0.8;
+}
+
+.hero-section .hi-span{
+    position: absolute;
+    font-size: 250px;
+    text-transform: uppercase;
+    font-family: sans;
+    font-weight: 900;
+    top: 20%;
+    left: 40%;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke:2px var(--second-color);
+    z-index: -1;
+    opacity: 0.2;
+    animation: scale-text 4s linear infinite;
+}
+
+@keyframes scale-text {
+    0%{
+        scale: 1;
+    }
+    50%{
+        scale: 1.1;
+    }
+    100%{
+        scale: 1;
+    }
+}
+
+.hero-section .text-info {
+    
+}
+
+.hero-section .text-info h5{
+    color: var(--main-color);
+    font-size: 34px;
+    font-weight: 700;
+}
+
+.hero-section .text-info h2{
+    /* color: #fff; */
+    font-size: 60px;
+    font-weight: 800;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    background: linear-gradient(-90deg ,var(--main-color), var(--second-color));
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.hero-section .text-info .img{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-section .text-info .img img{
+    width: 300px;
+    transform: rotate(2.2deg);
+    border-radius: 12px;
+    border: 2px solid var(--second-color);
+    transition: all .3s;
+}
+.hero-section .text-info .img img:hover{
+    transform: rotate(0);
+}
+
+.hero-section .text-info p{
+    color: #666;
+    max-width: 75%;
+    margin: 20px 0;
+}
+
+.hero-section .text-info .btns{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 40px;
+}
+
+.hero-section .text-info .btns button{
+    width: 180px;
+    padding: 10px 0;
+    border-radius: 35px;
+    border: none;
+    background-color: transparent;
+    border: 1px solid var(--second-color);
+    color: var(--second-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all .3s;
+    text-transform: capitalize;
+}
+
+.hero-section .text-info .btns button svg{
+    width: 17px;
+    fill: var(--second-color);
+    transition: all .3s;
+}
+
+.hero-section .text-info .btns button:hover{
+    background-color: var(--second-color);
+    color: #fff;
+}
+.hero-section .text-info .btns button:hover svg{
+    fill: #fff;
+}
+
+.hero-section .text-info .btns .social-media{
+    display: flex;
+    align-items: center;
+
+}   
+
+.hero-section .text-info .btns .social-media .icon{
+    width: 35px;
+    height: 35px;
+    border: 1px solid var(--second-color);
+    border-radius: 50%;
+    margin: 0 8px;
+    transition: all .3s;
+}
+
+.hero-section .text-info .btns .social-media .icon a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-section .text-info .btns .social-media .icon svg{
+    fill: var(--second-color);
+}
+
+.hero-section .text-info .btns .social-media .icon:hover{
+    background-color: var(--second-color);
+}
+
+.hero-section .text-info .btns .social-media .icon:hover svg{
+    fill: #fff;
+}
+
+
+.hero-section .img-right{
+    width: 400px;
+    border-radius: 12px;
+    overflow: hidden;
+    transform: rotate(5deg);
+    transition: all .4s;
+}
+
+.hero-section .img-right:hover{
+    transform: rotate(0);
+    border: 2px solid var(--second-color);
+}
+
+.hero-section .img-right img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/*============================
+    start media query 
+==============================*/
+
+@media only screen and (max-width:1200px){
+    .hero-section .img-right{
+        width: 300px;
+    }
+    .hero-section .text-info h2{
+        font-size: 45px;
+    }
+}
+
+
+@media only screen and (max-width:991px){
+    .hero-section .text-info h2{
+        font-size: 35px;
+    }
+    .hero-section .text-info p{
+        font-size: 16px;
+        max-width: 100%;
+    }
+    .hero-section .text-info .btns button{
+        width: 160px;
+        font-size: 13px;
+    }
+}
+
+@media only screen and (max-width:768px){
+    .hero-section .text-info h5{
+        font-size: 25px;
+    }
+    .hero-section .text-info h2{
+        font-size: 30px;
+    }
+    .hero-section .text-info p{
+        font-size: 14px;
+    }
+    .hero-section .text-info .img{
+        /* width: 300px; */
+    }
+    .hero-section .text-info .btns button{
+        width: 220px;
+    }
+}
+
+
+/* =================
+    Social Media
+====================*/
+
+.hero-section .icons-social-media{
+    position: fixed;
+    bottom: 20px;
+    left: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    z-index: 10;
+}
+
+.hero-section .icons-social-media a.icon{
+    width: 60px;
+    height: 60px;
+}
+
+.hero-section .icons-social-media a.icon img{
+    width: 100%;
+    filter: drop-shadow(0px 0px 3px #c7c7c7);
+}

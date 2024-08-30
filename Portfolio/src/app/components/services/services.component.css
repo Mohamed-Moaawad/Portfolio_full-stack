@@ -1,0 +1,70 @@
+.services{
+    width: 100%;
+    /* background-color: rgba(0, 0, 0, 0.938); */
+    padding: var(--padding-sections);
+    background-image: url(../../../../public/images/serv-circles.png);
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-color: var(--bg-sections);
+}
+
+.services .row .box{
+    padding: 17px 20px;
+    background: rgba(208, 208, 208, 0.3);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+}
+
+.services .row .icon{
+    width: 70px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+}
+
+.services .row .icon.one{
+    
+    background-color: #EF6A58;
+}
+
+.services .row .icon.two{
+    background-color: #0FB885;
+    
+}
+
+.services .row .icon.three{
+    background-color: #EFBA00;
+    
+}
+
+
+.services .row h5{
+    text-transform: capitalize;
+    margin: 15px 0;
+}
+
+.services .row h5 a{
+    color: var(--second-color);
+    text-decoration: none;
+}
+
+.services .row p{
+    font-size: 15px;
+    letter-spacing: var(--text-space);
+    color: var(--gray-color);
+    transition: var(--transition-size);
+}
+
+@media only screen and (max-width: 1200px){
+    .services .row p{
+        font-size: 14px;
+    }
+}
+@media only screen and (max-width: 991px){
+    .services .row p{
+        font-size: 13px;
+    }
+}

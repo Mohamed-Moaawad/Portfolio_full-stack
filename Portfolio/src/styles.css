@@ -1,0 +1,91 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+:root{
+    --main-color: #2a1454;
+    --second-color: #8750f7;
+    /* --second-color: #5777FF; */
+    --gray-color: #666;
+    --white-color: #fff;
+    --text-space: 2px;
+    --transition-size: all .3s;
+    --padding-sections: 120px 0;
+    --bg-sections: #edf2f8d9;
+    /* --bg-sections: #0A0A12; */
+}
+
+body{
+    font-family: "Sora", sans-serif;
+    /* background-color: #0A0A12; */
+    /* background-color: #0F0716; */
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: var(--second-color);
+    border-radius: 15px;
+    border: 2px solid var(--white-color);
+    cursor: grab;
+}
+::-webkit-scrollbar-track{
+    background-color: var(--bg-sections);
+}
+
+.sec-title{
+    width: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.sec-title h3{
+    font-size: 28px;
+    text-transform: capitalize;
+    color: var(--second-color);
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    font-weight: 800;
+}
+
+.sec-title h3 span{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.sec-title p{
+    max-width: 50%;
+    transition: var(--transition-size);
+}
+
+@media only screen and (max-width:991px){
+    .sec-title p{
+        max-width: 70%;
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width:768px){
+    .sec-title p{
+        max-width: 90%;
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width:550px){
+    .sec-title p{
+        max-width: 90%;
+        font-size: 10px;
+    }
+}

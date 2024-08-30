@@ -1,0 +1,47 @@
+nav{
+    position: fixed;
+    width: 100%;
+    padding: 15px 0;
+    z-index: 10;
+    background-color: #eeeeee30;
+    backdrop-filter: blur(15px);
+}
+nav .container a.navbar-brand h5{
+    font-size: 23px;
+    font-weight: 700;
+}
+
+nav .container a.navbar-brand h5 span{
+    color: var(--second-color);
+}
+
+nav .container ul{
+    list-style: none;
+    padding: 0;
+}
+
+nav .container ul li{
+    display: inline-block;
+    margin: 0 12px;
+    padding: 3px 6px;
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: 19px;
+}
+
+@media only screen and (max-width: 1000px){
+    nav .container ul{
+        position: absolute;
+        background-color: red;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: ;
+        display: flex;
+        flex-direction: column;
+        display: none;
+    }
+    nav .container ul li{
+        margin: 18px ;
+    }
+}
